@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
-import { loadFeaturedReports } from '../actions/wb'
+import { getWorldEconomicOutlook } from '../actions/imf'
 
 class MainComponent extends React.Component {
 
@@ -27,7 +27,7 @@ const select = (state) => {
 
 const actions = (dispatch) => {
     return {
-        load: () => dispatch(loadFeaturedReports())
+        load: () => dispatch(getWorldEconomicOutlook())
     }
 }
 
