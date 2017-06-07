@@ -2,7 +2,12 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
-import { getWorldEconomicOutlook } from '../actions/imf'
+import { 
+    getWorldEconomicOutlook, 
+    getGlobalFinacialStabilityReport,
+    getFiscalMonitor,
+    getRegionalEconomicReports
+} from '../actions/imf'
 
 class MainComponent extends React.Component {
 
@@ -27,7 +32,7 @@ const select = (state) => {
 
 const actions = (dispatch) => {
     return {
-        load: () => dispatch(getWorldEconomicOutlook())
+        load: () => dispatch(getRegionalEconomicReports())
     }
 }
 
