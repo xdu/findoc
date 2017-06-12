@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="no-cache" http-equiv="Pragma">
+<meta content="no-cache,no-Store" http-equiv="Cache-Control">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<link type="image/png" rel="shortcut icon" href="/themes/OKR2/images/wb-favicon.png">
+<link href="/themes/OKR2/images/apple_touch_icons/AppIcon76x76@2x.png" rel="apple-touch-icon-precomposed">
+<link href="/themes/OKR2/images/apple_touch_icons/AppIcon72x72.png" sizes="72x72" rel="apple-touch-icon-precomposed">
+<link href="/themes/OKR2/images/apple_touch_icons/AppIcon76x76.png" sizes="76x76" rel="apple-touch-icon-precomposed">
+<link href="/themes/OKR2/images/apple_touch_icons/AppIcon57x57@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+<link href="/themes/OKR2/images/apple_touch_icons/AppIcon60x60@2x.png" sizes="120x120" rel="apple-touch-icon-precomposed">
+<link href="/themes/OKR2/images/apple_touch_icons/AppIcon72x72@2x.png" sizes="144x144" rel="apple-touch-icon-precomposed">
+<link href="/themes/OKR2/images/apple_touch_icons/AppIcon76x76@2x.png" sizes="152x152" rel="apple-touch-icon-precomposed">
+<meta name="Generator" content="DSpace 5.2">
+<link type="text/css" rel="stylesheet" media="" href="/themes/OKR2/vendor/components-font-awesome/css/font-awesome.css">
+<link href="/themes/OKR2/styles/main.css" rel="stylesheet">
+<link type="application/rss+xml" rel="alternate" href="/feed/rss_1.0/site">
+<link type="application/rss+xml" rel="alternate" href="/feed/rss_2.0/site">
+<link type="application/atom+xml" rel="alternate" href="/feed/atom_1.0/site">
+<link type="application/opensearchdescription+xml" rel="search" href="http://openknowledge.worldbank.org:80/description.xml" title="DSpace">
+<script type="text/javascript">if (top.frames.length!=0) top.location=self.document.location;</script><script>
+                //Clear default text of emty text areas on focus
+                function tFocus(element)
+                {
+                if (element.value == ' '){element.value='';}
+                }
+                //Clear default text of emty text areas on submit
+                function tSubmit(form)
+                {
+                var defaultedElements = document.getElementsByTagName("textarea");
+                for (var i=0; i != defaultedElements.length; i++){
+                if (defaultedElements[i].value == ' '){
+                defaultedElements[i].value='';}}
+                }
+                //Disable pressing 'enter' key to submit a form (otherwise pressing 'enter' causes a submission to start over)
+                function disableEnterKey(e)
+                {
+                var key;
+
+                if(window.event)
+                key = window.event.keyCode; //Internet Explorer
+                else
+                key = e.which; //Firefox and Netscape
+
+                if(key == 13) //if "Enter" pressed, then disable!
+                return false;
+                else
+                return true;
+                }
+
+                var time=new Date();
+                currentYear=time.getYear();
+                if (currentYear < 2000) {
+                currentYear = currentYear + 1900;
+                }
+            </script><!--[if lt IE 9]>
+                <script src="/themes/OKR2/vendor/html5shiv/dist/html5shiv.js"> </script>
+                <script src="/themes/OKR2/vendor/respond/respond.min.js"> </script>
+                <![endif]--><script src="/themes/OKR2/vendor/modernizr/modernizr.js"> </script><script src="/themes/OKR2/vendor/handlebars/handlebars.min.js"> </script><script>
+                (function() {
+                atmire = window.atmire || {};
+                atmire.Handlebars = atmire.Handlebars || Handlebars;
+                })();
+            </script>
+<title>Open Knowledge Repository</title>
+</head><body>
+<header class="inherit-background">
+<div class="hidden" id="socialOverlay">
+<div id="socialOverlay_container">
+<div id="socialOverlay_title">
+<h2>Follow World Bank Publications on <a target="_blank" href="http://www.facebook.com/worldbankpublications">Facebook</a>, <a target="_blank" href="http://twitter.com/WBPubs">Twitter</a> or
+                            <a target="_blank" href="https://www.linkedin.com/company/world-bank-publications">Linked-In</a>
+</h2>
+</div>
+</div>
+</div>
+<div class="container wb-logo-container hidden-xs">
+<a href="http://www.worldbank.org"><img class="wb-logo-top" src="/themes/OKR2/images/WBG_Horizontal-RGB-high.png"></a>
+</div>
+<div class="container visible-xs fixed-top-bar">
+<a href="http://www.worldbank.org/" class="wb-logo">
+                    &nbsp;</a><a href="/" class="okr-logo-only">
+                    &nbsp;</a><a class="okr-text" href="/">&nbsp;</a>
+</div>
+<div class="container ds-content-container header-content-container">
+<div class="header row">
+<div class="col-sm-12 col-md-9 col-lg-9 top-logo">
+<a class="okr-logo" href="/">
+                            &nbsp;
+                        </a><a tabindex="-1" class="okr-logo obfuscator" href="/">
+                            &nbsp;
+                        </a>
+</div>
+<div class="col-sm-12 col-md-3 col-lg-3 header-search-box-col">
+<div class="row header-search-box-row">
+<div class="col-xs-2 col-md-0">
+<button data-target=".navbar-collapse" data-toggle="collapse" class="visible-sm visible-xs sidebar-toggle navbar-toggle" type="button"><span class="icon-bar">&nbsp;</span><span class="icon-bar">&nbsp;</span><span class="icon-bar">&nbsp;</span></button>
+</div>
+<div class="col-sm-6 col-md-0 small-logo">
+<a class="okr-logo-small" href="/">&nbsp;</a>
+</div>
+<div class="col-xs-10 col-sm-offset-0 col-sm-4 col-md-offset-0 col-md-12">
+<form method="post" class="ds-search-form" action="/discover">
+<fieldset>
+<div class="input-group">
+<input placeholder="Search" type="text" class="form-control" name="query" value=""><span class="input-group-btn"><button title="Go" class="ds-button-field btn btn-default"><span class="glyphicon glyphicon-search"></span></button></span>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div id="headerScroll" class="inherit-background headerScrollBar hidden">
+<div class="container wb-logo-container hidden-xs">
+<a href="http://www.worldbank.org"><img class="wb-logo-top" src="/themes/OKR2/images/logo-wb-header-en.svg"></a><a class="okr-text-header-logo" href="/">&nbsp;</a><a href="/" class="okr-logo-only">&nbsp;</a>
+</div>
+<div class="container visible-xs fixed-top-bar">
+<a href="http://www.worldbank.org/" class="wb-logo">
+                    &nbsp;</a><a href="/" class="okr-logo-only">
+                    &nbsp;</a><a class="okr-text" href="/">&nbsp;</a>
+</div>
+<div class="container ds-content-container header-content-container">
+<div class="header row socialbuttonsrow">
+<div class="col-sm-12 col-md-12 col-lg-12">
+<div class="row header-search-box-row">
+<button data-target=".navbar-collapse" data-toggle="collapse" class="visible-sm visible-xs sidebar-toggle navbar-toggle" type="button"><span class="icon-bar">&nbsp;</span><span class="icon-bar">&nbsp;</span><span class="icon-bar">&nbsp;</span></button><span class="socialButtonsDiv"><a class="btn social-btn btn-twitter" target="_blank" href="http://twitter.com/share?url=http://openknowledge.worldbank.org/"><i class="fa fa-twitter"></i><span class="social-btn-text">Tweet</span></a><a class="btn social-btn btn-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=http://openknowledge.worldbank.org/"><i class="fa fa-facebook"></i><span class="social-btn-text">Like</span></a><a class="btn social-btn btn-linkedin" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=http://openknowledge.worldbank.org/"><i class="fa fa-linkedin"></i><span class="social-btn-text">Share</span></a><span class="btn btn-default shareCountScroll hidden" id="shareCount"># Shares:
+                                    <span id="totalnumberofshares">0</span></span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden" id="no-js-warning-wrapper">
+<div id="no-js-warning">
+<div class="notice failure">JavaScript is disabled for your browser. Some features of this site may not work without it.</div>
+</div>
+</div>
+<div id="main" class="container">
+<div class="row">
+<div class="ds-content-slider">
+<div class="col-sm-3 col-md-2 sidebar-col vertical-slider invisible-xs">
+<div class="word-break row" id="ds-options">
+<div class="ds-sidebar-slider">
+<ul class="nav col-xs-6 visible-xs">
+<li>
+<h2 class="sidebar-menu-trigger" data-target="aspect_browseArtifacts_Navigation_list_global">Browse<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+</h2>
+</li>
+<li>
+<h2 class="sidebar-menu-trigger" data-target="aspect_authorprofile_Navigation_list_authorprofile">Author profiles<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+</h2>
+</li>
+<li>
+<h2 class="sidebar-menu-trigger" data-target="aspect_statistics_Navigation_list_statistics">Site statistics<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+</h2>
+</li>
+<li>
+<h2 class="sidebar-menu-trigger" data-target="aspect_statistics_Navigation_list_focus-sub-saharan-africa">Focus<span class="glyphicon glyphicon-chevron-right pull-right"></span>
+</h2>
+</li>
+</ul>
+<ul class="nav col-xs-6 col-sm-12">
+<li id="aspect_browseArtifacts_Navigation_list_global" class="ds-top-level-option-set hidden-xs">
+<h2 class="ds-option-set-head sidebar-menu-trigger-back  h5">
+<span class="back-chevron"><span class="glyphicon glyphicon-chevron-left pull-left"></span></span>Browse</h2>
+<ul class="ds-option-set">
+<li class="ds-option">
+<a href="/community-list">Collections</a>
+</li>
+<li class="ds-option">
+<a href="/browse?type=author">Authors</a>
+</li>
+<li class="ds-option">
+<a href="/browse?type=dateissued">Dates</a>
+</li>
+<li class="ds-option">
+<a href="/browse?type=topic">Topics</a>
+</li>
+<li class="ds-option">
+<a href="/browse?type=title">Titles</a>
+</li>
+</ul>
+</li>
+<li id="aspect_authorprofile_Navigation_list_authorprofile" class="ds-top-level-option-set hidden-xs">
+<h2 class="ds-option-set-head sidebar-menu-trigger-back  h5">
+<span class="back-chevron"><span class="glyphicon glyphicon-chevron-left pull-left"></span></span>Author profiles</h2>
+<ul class="ds-option-set">
+<li class="ds-option">
+<a href="/browse-by">View</a>
+</li>
+</ul>
+</li>
+<li id="aspect_statistics_Navigation_list_statistics" class="ds-top-level-option-set hidden-xs">
+<h2 class="ds-option-set-head sidebar-menu-trigger-back  h6">
+<span class="back-chevron"><span class="glyphicon glyphicon-chevron-left pull-left"></span></span>Site statistics</h2>
+<ul class="ds-option-set">
+<li class="ds-option">
+<a href="/most-popular/author">Authors</a>
+</li>
+<li class="ds-option">
+<a href="/most-popular/country">Countries</a>
+</li>
+<li class="ds-option">
+<a href="/most-popular/item">Titles</a>
+</li>
+</ul>
+</li>
+<li id="aspect_statistics_Navigation_list_focus-sub-saharan-africa" class="ds-top-level-option-set hidden-xs">
+<h2 class="ds-option-set-head sidebar-menu-trigger-back">
+<span class="back-chevron"><span class="glyphicon glyphicon-chevron-left pull-left"></span></span>Focus</h2>
+<ul class="ds-option-set">
+<li class="ds-option">
+<a href="/focus-sub-saharan-africa">Sub-Saharan Africa</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-sm-9 col-md-10 main-content">
+<ul class="breadcrumb hidden">
+<li class="active">Home</li>
+</ul>
+<div>
+<div id="aspect_discovery_SiteRecentSubmissions_div_site-home" class="ds-static-div primary repository">
+<h2 class="ds-head">Publications</h2>
+<p id="aspect_discovery_SiteRecentSubmissions_p_item-count" class="ds-paragraph item-count">23,430 publications available</p>
+<ul class="nav nav-tabs">
+<li class="publication-tab" role="presentation">
+<a data-toggle="tab" href="#tab1">Featured</a>
+</li>
+<li class="publication-tab" role="presentation">
+<a data-toggle="tab" href="#tab2">Latest</a>
+</li>
+<li class="publication-tab" role="presentation">
+<a data-toggle="tab" href="#tab3">Trending</a>
+</li>
+<li class="dropdown hidden publication-dropdown" role="presentation">
+<a aria-expanded="false" aria-haspopup="true" role="button" href="#" data-toggle="dropdown" class="dropdown-toggle">Publications<span class="caret"></span></a>
+<ul class="dropdown-menu">
+<li class="publication-tab" role="presentation">
+<a data-toggle="tab" href="#tab1">Featured</a>
+</li>
+<li class="publication-tab" role="presentation">
+<a data-toggle="tab" href="#tab2">Latest</a>
+</li>
+<li class="publication-tab" role="presentation">
+<a data-toggle="tab" href="#tab3">Trending</a>
+</li>
+</ul>
+</li>
+</ul>
+<div id="tabs" class="tab-content">
+<div class="tab-pane" id="tab1">
+<ul class="ds-artifact-list list-unstyled">
+<!-- External Metadata URL: cocoon://metadata/handle/10986/26565/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL,ORIGINAL-->
+<li class="ds-artifact-item odd">
+<div class="item-wrapper clearfix" data-href="/handle/10986/26565">
+<div class="row ds-artifact-item ds-item-summary-row">
+<div class="col-sm-2 hidden-xs artifact-preview">
+<div class="thumbnail artifact-preview">
+<a href="/handle/10986/26565" class="image-link"><img class="img-responsive" alt="Thumbnail" src="/bitstream/handle/10986/26565/9781464811296.pdf.jpg?sequence=3&isAllowed=y"></a>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12 artifact-summary">
+<div class="item-metadata">
+<div class="content">
+<div class="content doctype-info">
+<span>Serial</span>
+</div>
+<h4>
+<a href="/handle/10986/26565" class="no-decor">Carbon Pricing Watch 2017</a>
+</h4>
+</div>
+<span class="Z3988 hidden-xs" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=978-1-4648-1129-6&amp;rft_id=http%3A%2F%2Fhdl.handle.net%2F10986%2F26565&amp;rft_id=211129&amp;rft_id=10.1596%2F978-1-4648-1129-6&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;rft.identifier=211129&amp;rft.date=2017-05-22&amp;rft.identifier=10.1596%2F978-1-4648-1129-6&amp;rft.name=State+and+Trends+of+Carbon+Pricing&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F13334&amp;rft.googlescholar=yes">&nbsp;</span>
+<div class="content author-info">
+<span><a href="/handle/10986/26565" class="no-decor"><span>World Bank</span>; <span>Ecofys</span></a></span>
+</div>
+<div class="artifact-info hidden-xs hidden-sm hidden-md">
+<span class="short-description"><a href="/handle/10986/26565" class="no-decor">The report is a one stop shop for learning about key developments and prospects of existing and emerging carbon initiatives. A challenging international carbon market has not stopped the development of domestic carbon pricing initiatives. Today, about 40 national and over 20 sub-national jurisdictions responsible for a ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-xs hidden-sm hidden-lg"><a href="/handle/10986/26565" class="no-decor">The report is a one stop shop for learning about key developments and prospects of existing and emerging carbon initiatives. A challenging international carbon market has not stopped the development o ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-md hidden-lg"><a href="/handle/10986/26565" class="no-decor">The report is a one stop shop for learning about key developments and prospects of existing and emerging carbon initiatives. A challenging international carbon market has not stopped the development of domestic carbon pricing initiatives. Today, about 40 national and over 20 sub-national jurisdictions responsible for almost one fourth of global greenhouse gas emissions are putting a price on carbon. Togethe ...</a></span>
+</div>
+<div class="content date-info">
+<a href="/handle/10986/26565" class="no-decor">May 22, 2017</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<!-- External Metadata URL: cocoon://metadata/handle/10986/26711/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL,ORIGINAL-->
+<li class="ds-artifact-item even">
+<div class="item-wrapper clearfix" data-href="/handle/10986/26711">
+<div class="row ds-artifact-item ds-item-summary-row">
+<div class="col-sm-2 hidden-xs artifact-preview">
+<div class="thumbnail artifact-preview">
+<a href="/handle/10986/26711" class="image-link"><img class="img-responsive" alt="Thumbnail" src="/bitstream/handle/10986/26711/9781464810367.pdf.jpg?sequence=3&isAllowed=y"></a>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12 artifact-summary">
+<div class="item-metadata">
+<div class="content">
+<div class="content doctype-info">
+<span>Book</span>
+</div>
+<h4>
+<a href="/handle/10986/26711" class="no-decor">When Growth Is Not Enough : Explaining the Rigidity of Poverty in the Dominican Republic</a>
+</h4>
+</div>
+<span class="Z3988 hidden-xs" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=978-1-4648-1036-7&amp;rft_id=http%3A%2F%2Fhdl.handle.net%2F10986%2F26711&amp;rft_id=211036&amp;rft_id=115257&amp;rft_id=10.1596%2F978-1-4648-1036-7&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;rft.identifier=211036&amp;rft.date=2017-05-23&amp;rft.region=Latin+America+%26+Caribbean&amp;rft.region=Caribbean&amp;rft.identifier=115257&amp;rft.identifier=10.1596%2F978-1-4648-1036-7&amp;rft.region=Dominican+Republic&amp;rft.name=Directions+in+Development&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F2146&amp;rft.googlescholar=yes">&nbsp;</span>
+<div class="content author-info">
+<span><a href="/handle/10986/26711" class="no-decor"><span>Carneiro, Francisco Galrao</span>; <span>Sirtaine, Sophie</span></a></span>
+</div>
+<div class="artifact-info hidden-xs hidden-sm hidden-md">
+<span class="short-description"><a href="/handle/10986/26711" class="no-decor">The Dominican Republic stands out as a fast growing economy that has not been able to generate a commensurate reduction in poverty. Three reasons have been raised before to explain this conundrum: (i) a labor market that does not translate productivity gains into salary increases; (ii) a domestic economy with weak inte ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-xs hidden-sm hidden-lg"><a href="/handle/10986/26711" class="no-decor">The Dominican Republic stands out as a fast growing economy that has not been able to generate a commensurate reduction in poverty. Three reasons have been raised before to explain this conundrum: (i) ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-md hidden-lg"><a href="/handle/10986/26711" class="no-decor">The Dominican Republic stands out as a fast growing economy that has not been able to generate a commensurate reduction in poverty. Three reasons have been raised before to explain this conundrum: (i) a labor market that does not translate productivity gains into salary increases; (ii) a domestic economy with weak inter-sectoral linkages; (iii) and a public sector that does not spend enough nor particularly ...</a></span>
+</div>
+<div class="content date-info">
+<a href="/handle/10986/26711" class="no-decor">May 23, 2017</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<!-- External Metadata URL: cocoon://metadata/handle/10986/26659/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL,ORIGINAL-->
+<li class="ds-artifact-item odd">
+<div class="item-wrapper clearfix" data-href="/handle/10986/26659">
+<div class="row ds-artifact-item ds-item-summary-row">
+<div class="col-sm-2 hidden-xs artifact-preview">
+<div class="thumbnail artifact-preview">
+<a href="/handle/10986/26659" class="image-link"><img class="img-responsive" alt="Thumbnail" src="/bitstream/handle/10986/26659/9781464810602.pdf.jpg?sequence=3&isAllowed=y"></a>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12 artifact-summary">
+<div class="item-metadata">
+<div class="content">
+<div class="content doctype-info">
+<span>Book</span>
+</div>
+<h4>
+<a href="/handle/10986/26659" class="no-decor">Toward More Efficient and Effective Public Social Spending in Central America</a>
+</h4>
+</div>
+<span class="Z3988 hidden-xs" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=978-1-4648-1060-2&amp;rft_id=http%3A%2F%2Fhdl.handle.net%2F10986%2F26659&amp;rft_id=211060&amp;rft_id=115209&amp;rft_id=10.1596%2F978-1-4648-1060-2&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;rft.identifier=211060&amp;rft.date=2017-06-08&amp;rft.region=Latin+America+%26+Caribbean&amp;rft.region=Central+America&amp;rft.identifier=115209&amp;rft.identifier=10.1596%2F978-1-4648-1060-2&amp;rft.region=Costa+Rica&amp;rft.region=El+Salvador&amp;rft.region=Guatemala&amp;rft.region=Honduras&amp;rft.region=Nicaragua&amp;rft.region=Panama&amp;rft.name=Directions+in+Development&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F2146&amp;rft.googlescholar=yes">&nbsp;</span>
+<div class="content author-info">
+<span><a href="/handle/10986/26659" class="no-decor"><span>Acosta, Pablo A.</span>; <span>Almeida, Rita</span>; <span>Gindling, Thomas</span>; <span>Lao Pena, Christine</span></a></span>
+</div>
+<div class="artifact-info hidden-xs hidden-sm hidden-md">
+<span class="short-description"><a href="/handle/10986/26659" class="no-decor">Central America has come a long way both in terms of economic and political stability. Increasingly the region is focusing on implementing productivity-enhancing reforms as well as supporting reductions in poverty and inequality. This report analyzes recent trends in public social spending in Central America from 2007  ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-xs hidden-sm hidden-lg"><a href="/handle/10986/26659" class="no-decor">Central America has come a long way both in terms of economic and political stability. Increasingly the region is focusing on implementing productivity-enhancing reforms as well as supporting reductio ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-md hidden-lg"><a href="/handle/10986/26659" class="no-decor">Central America has come a long way both in terms of economic and political stability. Increasingly the region is focusing on implementing productivity-enhancing reforms as well as supporting reductions in poverty and inequality. This report analyzes recent trends in public social spending in Central America from 2007 to 2014, conducts international benchmarking, examines measures of the effectiveness and e ...</a></span>
+</div>
+<div class="content date-info">
+<a href="/handle/10986/26659" class="no-decor">May 18, 2017</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<!-- External Metadata URL: cocoon://metadata/handle/10986/26489/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL,ORIGINAL-->
+<li class="ds-artifact-item even">
+<div class="item-wrapper clearfix" data-href="/handle/10986/26489">
+<div class="row ds-artifact-item ds-item-summary-row">
+<div class="col-sm-2 hidden-xs artifact-preview">
+<div class="thumbnail artifact-preview">
+<a href="/handle/10986/26489" class="image-link"><img class="img-responsive" alt="Thumbnail" src="/bitstream/handle/10986/26489/9781464810145.pdf.jpg?sequence=3&isAllowed=y"></a>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12 artifact-summary">
+<div class="item-metadata">
+<div class="content">
+<div class="content doctype-info">
+<span>Book</span>
+</div>
+<h4>
+<a href="/handle/10986/26489" class="no-decor">At a Crossroads : Higher Education in Latin America and the Caribbean</a>
+</h4>
+</div>
+<span class="Z3988 hidden-xs" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=978-1-4648-1014-5&amp;rft_id=http%3A%2F%2Fhdl.handle.net%2F10986%2F26489&amp;rft_id=211014&amp;rft_id=114771&amp;rft_id=10.1596%2F978-1-4648-1014-5&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;rft.identifier=211014&amp;rft.date=2017-05-02&amp;rft.region=Latin+America+%26+Caribbean&amp;rft.region=Caribbean&amp;rft.region=Central+America&amp;rft.region=Latin+America&amp;rft.identifier=114771&amp;rft.identifier=10.1596%2F978-1-4648-1014-5&amp;rft.name=Spanish+PDFs+Available&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F6002&amp;rft.name=Directions+in+Development&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F2146&amp;rft.googlescholar=yes">&nbsp;</span>
+<div class="content author-info">
+<span><a href="/handle/10986/26489" class="no-decor"><span>Ferreyra, Maria Marta</span>; <span>Avitabile, Ciro</span>; <span>Botero &Aacute;lvarez, Javier</span>; <span>Haimovich Paz, Francisco</span>; <span>Urz&uacute;a, Sergio</span></a></span>
+</div>
+<div class="artifact-info hidden-xs hidden-sm hidden-md">
+<span class="short-description"><a href="/handle/10986/26489" class="no-decor">Higher education (HE) has expanded dramatically in Latin America and the Caribbean (LAC) since 2000. While access became more equitable, quality concerns remain. This volume studies the expansion, as well as HE quality, variety and equity in LAC. It investigates the expansion&rsquo;s demand and supply drivers, and outlines p ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-xs hidden-sm hidden-lg"><a href="/handle/10986/26489" class="no-decor">Higher education (HE) has expanded dramatically in Latin America and the Caribbean (LAC) since 2000. While access became more equitable, quality concerns remain. This volume studies the expansion, as  ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-md hidden-lg"><a href="/handle/10986/26489" class="no-decor">Higher education (HE) has expanded dramatically in Latin America and the Caribbean (LAC) since 2000. While access became more equitable, quality concerns remain. This volume studies the expansion, as well as HE quality, variety and equity in LAC. It investigates the expansion&rsquo;s demand and supply drivers, and outlines policy implications....</a></span>
+</div>
+<div class="content date-info">
+<a href="/handle/10986/26489" class="no-decor">May 02, 2017</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<!-- External Metadata URL: cocoon://metadata/handle/10986/26577/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL,ORIGINAL-->
+<li class="ds-artifact-item odd">
+<div class="item-wrapper clearfix" data-href="/handle/10986/26577">
+<div class="row ds-artifact-item ds-item-summary-row">
+<div class="col-sm-2 hidden-xs artifact-preview">
+<div class="thumbnail artifact-preview">
+<a href="/handle/10986/26577" class="image-link"><img class="img-responsive" alt="Thumbnail" src="/bitstream/handle/10986/26577/9781464810695.pdf.jpg?sequence=3&isAllowed=y"></a>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12 artifact-summary">
+<div class="item-metadata">
+<div class="content">
+<div class="content doctype-info">
+<span>Book</span>
+</div>
+<h4>
+<a href="/handle/10986/26577" class="no-decor">The Last Mile to Quality Service Delivery in Jordan</a>
+</h4>
+</div>
+<span class="Z3988 hidden-xs" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=978-1-4648-1069-5&amp;rft_id=http%3A%2F%2Fhdl.handle.net%2F10986%2F26577&amp;rft_id=211069&amp;rft_id=114997&amp;rft_id=10.1596%2F978-1-4648-1069-5&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;rft.identifier=211069&amp;rft.date=2017-05-11&amp;rft.region=Middle+East+and+North+Africa&amp;rft.identifier=114997&amp;rft.identifier=10.1596%2F978-1-4648-1069-5&amp;rft.region=Jordan&amp;rft.name=Directions+in+Development&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F2146&amp;rft.googlescholar=yes">&nbsp;</span>
+<div class="content author-info">
+<span><a href="/handle/10986/26577" class="no-decor"><span>Rabie, Tamer Samah</span>; <span>Nikaein Towfighian, Samira</span>; <span>Clark, Cari</span>; <span>Camrnett, Melani</span></a></span>
+</div>
+<div class="artifact-info hidden-xs hidden-sm hidden-md">
+<span class="short-description"><a href="/handle/10986/26577" class="no-decor">A growing body of research suggests that the quantity and quality of structural inputs of education and healthcare services such as infrastructure, classroom and medical supplies, and even teacher and medical training are largely irrelevant if teachers and healthcare providers do not exert the requisite effort to trans ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-xs hidden-sm hidden-lg"><a href="/handle/10986/26577" class="no-decor">A growing body of research suggests that the quantity and quality of structural inputs of education and healthcare services such as infrastructure, classroom and medical supplies, and even teacher and ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-md hidden-lg"><a href="/handle/10986/26577" class="no-decor">A growing body of research suggests that the quantity and quality of structural inputs of education and healthcare services such as infrastructure, classroom and medical supplies, and even teacher and medical training are largely irrelevant if teachers and healthcare providers do not exert the requisite effort to translate these inputs into effective teaching and medical service. To exert adquate effort, pr ...</a></span>
+</div>
+<div class="content date-info">
+<a href="/handle/10986/26577" class="no-decor">May 11, 2017</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<!-- External Metadata URL: cocoon://metadata/handle/10986/26730/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL,ORIGINAL-->
+<li class="ds-artifact-item even">
+<div class="item-wrapper clearfix" data-href="/handle/10986/26730">
+<div class="row ds-artifact-item ds-item-summary-row">
+<div class="col-sm-2 hidden-xs artifact-preview">
+<div class="thumbnail artifact-preview">
+<a href="/handle/10986/26730" class="image-link"><img class="img-responsive" alt="Thumbnail" src="/bitstream/handle/10986/26730/P148662%20Greening%20Africa%27s%20Cities_web.pdf.jpg?sequence=3&isAllowed=y"></a>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12 artifact-summary">
+<div class="item-metadata">
+<div class="content">
+<div class="content doctype-info">
+<span>Report</span>
+</div>
+<h4>
+<a href="/handle/10986/26730" class="no-decor">Greening Africa's Cities : Enhancing the Relationship between Urbanization, Environmental Assets, and Ecosystem Services</a>
+</h4>
+</div>
+<span class="Z3988 hidden-xs" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=P148662&amp;rft_id=http%3A%2F%2Fhdl.handle.net%2F10986%2F26730&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;rft.date=2017-05-23&amp;rft.region=Africa&amp;rft.region=Sub-Saharan+Africa&amp;rft.region=Nigeria&amp;rft.region=Senegal&amp;rft.region=South+Africa&amp;rft.region=Tanzania&amp;rft.region=Uganda&amp;rft.name=City+Development+Strategy&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F2187&amp;rft.googlescholar=yes">&nbsp;</span>
+<div class="content author-info">
+<span><a href="/handle/10986/26730" class="no-decor"><span>White, Roland</span>; <span>Turpie, Jane</span>; <span>Letley, Gwyneth Letley</span></a></span>
+</div>
+<div class="artifact-info hidden-xs hidden-sm hidden-md">
+<span class="short-description"><a href="/handle/10986/26730" class="no-decor">Africa is urbanizing late but fast. This brings many benefits but, as this report shows: thus far, urbanization in Africa, unique in a number of respects, is having deleterious and largely unchecked impacts on the natural environment; the degradation of natural assets&#13;
+and ecosystems within African cities carries tangi ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-xs hidden-sm hidden-lg"><a href="/handle/10986/26730" class="no-decor">Africa is urbanizing late but fast. This brings many benefits but, as this report shows: thus far, urbanization in Africa, unique in a number of respects, is having deleterious and largely unchecked i ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-md hidden-lg"><a href="/handle/10986/26730" class="no-decor">Africa is urbanizing late but fast. This brings many benefits but, as this report shows: thus far, urbanization in Africa, unique in a number of respects, is having deleterious and largely unchecked impacts on the natural environment; the degradation of natural assets&#13;
+and ecosystems within African cities carries tangible economic, fiscal and social costs; there are important opportunities to change the cur ...</a></span>
+</div>
+<div class="content date-info">
+<a href="/handle/10986/26730" class="no-decor">May 23, 2017</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="tab-pane" id="tab2">
+<ul class="ds-artifact-list list-unstyled">
+<!-- External Metadata URL: cocoon://metadata/handle/10986/26762/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL,ORIGINAL-->
+<li class="ds-artifact-item odd">
+<div class="item-wrapper clearfix" data-href="/handle/10986/26762">
+<div class="row ds-artifact-item ds-item-summary-row">
+<div class="col-sm-2 hidden-xs artifact-preview">
+<div class="thumbnail artifact-preview">
+<a href="/handle/10986/26762" class="image-link"><img class="img-responsive" alt="Thumbnail" src="/bitstream/handle/10986/26762/childmarriage.jpg?sequence=4&isAllowed=y"></a>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12 artifact-summary">
+<div class="item-metadata">
+<div class="content">
+<h4>
+<a href="/handle/10986/26762" class="no-decor">Compendium of International and National Legal Frameworks on Child Marriage</a>
+</h4>
+</div>
+<span class="Z3988 hidden-xs" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=http%3A%2F%2Fhdl.handle.net%2F10986%2F26762&amp;rft_id=090224b084b8faba_3_0&amp;rft_id=26869613&amp;rft_id=109260&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;rft.identifier=090224b084b8faba_3_0&amp;rft.identifier=26869613&amp;rft.date=2016-10-18&amp;rft.identifier=109260&amp;rft.name=Law%2C+Justice%2C+and+Development&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F2177&amp;rft.googlescholar=yes">&nbsp;</span>
+<div class="content author-info">
+<span><a href="/handle/10986/26762" class="no-decor"><span>Calimoutou, Emelyne</span>; <span>Liu, Yuantao</span>; <span>Mbu, Beverley</span></a></span>
+</div>
+<div class="artifact-info hidden-xs hidden-sm hidden-md">
+<span class="short-description"><a href="/handle/10986/26762" class="no-decor">The Compendium of International and&#13;
+            National Legal Framework on Child Marriage (&lsquo;the&#13;
+            Compendium&rsquo;) provides a survey of the key international,&#13;
+            regional and national legal instruments as they relate to&#13;
+            the right to marry with the full and free consent of the&#13;
+           ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-xs hidden-sm hidden-lg"><a href="/handle/10986/26762" class="no-decor">The Compendium of International and&#13;
+            National Legal Framework on Child Marriage (&lsquo;the&#13;
+            Compendium&rsquo;) provides a survey of the key international,&#13;
+            regional and nation ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-md hidden-lg"><a href="/handle/10986/26762" class="no-decor">The Compendium of International and&#13;
+            National Legal Framework on Child Marriage (&lsquo;the&#13;
+            Compendium&rsquo;) provides a survey of the key international,&#13;
+            regional and national legal instruments as they relate to&#13;
+            the right to marry with the full and free consent of the&#13;
+            intending spouses and to the obligation for government to&#13;
+            take legislative  ...</a></span>
+</div>
+<div class="content date-info">
+<a href="/handle/10986/26762" class="no-decor">Sep 01, 2016</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<!-- External Metadata URL: cocoon://metadata/handle/10986/26761/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL,ORIGINAL-->
+<li class="ds-artifact-item even">
+<div class="item-wrapper clearfix" data-href="/handle/10986/26761">
+<div class="row ds-artifact-item ds-item-summary-row">
+<div class="col-sm-2 hidden-xs artifact-preview">
+<div class="thumbnail artifact-preview">
+<a href="/handle/10986/26761" class="image-link"><img class="img-responsive" alt="Thumbnail" src="/bitstream/handle/10986/26761/frompanic.jpg?sequence=4&isAllowed=y"></a>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12 artifact-summary">
+<div class="item-metadata">
+<div class="content">
+<h4>
+<a href="/handle/10986/26761" class="no-decor">From panic and neglect to investing in health security : Financing pandemic preparedness at a national level</a>
+</h4>
+</div>
+<span class="Z3988 hidden-xs" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=http%3A%2F%2Fhdl.handle.net%2F10986%2F26761&amp;rft_id=090224b084bd65f7_1_0&amp;rft_id=27497232&amp;rft_id=115271&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;rft.identifier=090224b084bd65f7_1_0&amp;rft.identifier=27497232&amp;rft.date=2017-05-24&amp;rft.identifier=115271&amp;rft.name=Health%2C+Nutrition+and+Population&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F4394&amp;rft.googlescholar=yes">&nbsp;</span>
+<div class="content author-info">
+<span><a href="/handle/10986/26761" class="no-decor"><span>World Bank</span></a></span>
+</div>
+<div class="artifact-info hidden-xs hidden-sm hidden-md">
+<span class="short-description"><a href="/handle/10986/26761" class="no-decor">Deadly infectious pandemics will mark humanity's future, as they have shaped its past. Neither individual governments nor the global community can entirely prevent the emergence of infectious threats. But we can be much better prepared. This report by the International Working Group on Financing Preparedness (IWG) prop ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-xs hidden-sm hidden-lg"><a href="/handle/10986/26761" class="no-decor">Deadly infectious pandemics will mark humanity's future, as they have shaped its past. Neither individual governments nor the global community can entirely prevent the emergence of infectious threats. ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-md hidden-lg"><a href="/handle/10986/26761" class="no-decor">Deadly infectious pandemics will mark humanity's future, as they have shaped its past. Neither individual governments nor the global community can entirely prevent the emergence of infectious threats. But we can be much better prepared. This report by the International Working Group on Financing Preparedness (IWG) proposes ways in which national governments and development partners can finance investments i ...</a></span>
+</div>
+<div class="content date-info">
+<a href="/handle/10986/26761" class="no-decor">May 01, 2017</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<!-- External Metadata URL: cocoon://metadata/handle/10986/26760/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL,ORIGINAL-->
+<li class="ds-artifact-item odd">
+<div class="item-wrapper clearfix" data-href="/handle/10986/26760">
+<div class="row ds-artifact-item ds-item-summary-row">
+<div class="col-sm-2 hidden-xs artifact-preview">
+<div class="thumbnail artifact-preview">
+<a href="/handle/10986/26760" class="image-link"><img class="img-responsive" alt="Thumbnail" src="/bitstream/handle/10986/26760/WPS8068.pdf.jpg?sequence=4&isAllowed=y"></a>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12 artifact-summary">
+<div class="item-metadata">
+<div class="content">
+<div class="content doctype-info">
+<span>Working Paper</span>
+</div>
+<h4>
+<a href="/handle/10986/26760" class="no-decor">The Rise of the Middle Class and Economic Growth in ASEAN</a>
+</h4>
+</div>
+<span class="Z3988 hidden-xs" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=http%3A%2F%2Fhdl.handle.net%2F10986%2F26760&amp;rft_id=090224b084b96be5_1_0&amp;rft_id=27480768&amp;rft_id=WPS8068&amp;rft_id=10.1596%2F1813-9450-8068&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;rft.identifier=090224b084b96be5_1_0&amp;rft.identifier=27480768&amp;rft.date=2017-05-18&amp;rft.region=East+Asia+and+Pacific&amp;rft.identifier=WPS8068&amp;rft.identifier=10.1596%2F1813-9450-8068&amp;rft.name=Policy+Research+Working+Papers&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F9&amp;rft.googlescholar=yes">&nbsp;</span>
+<div class="content author-info">
+<span><a href="/handle/10986/26760" class="no-decor"><span>Brueckner, Markus</span>; <span>Dabla-Norris, Era</span>; <span>Gradstein, Mark</span>; <span>Lederman, Daniel</span></a></span>
+</div>
+<div class="artifact-info hidden-xs hidden-sm hidden-md">
+<span class="short-description"><a href="/handle/10986/26760" class="no-decor">This paper presents estimates of the&#13;
+            relationship between the share of income accruing to the&#13;
+            middle class and gross domestic product per capita of&#13;
+            economies from the Association of Southeast Asian Nations.&#13;
+            The increase in gross domestic product per capita that these&#13; ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-xs hidden-sm hidden-lg"><a href="/handle/10986/26760" class="no-decor">This paper presents estimates of the&#13;
+            relationship between the share of income accruing to the&#13;
+            middle class and gross domestic product per capita of&#13;
+            economies fro ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-md hidden-lg"><a href="/handle/10986/26760" class="no-decor">This paper presents estimates of the&#13;
+            relationship between the share of income accruing to the&#13;
+            middle class and gross domestic product per capita of&#13;
+            economies from the Association of Southeast Asian Nations.&#13;
+            The increase in gross domestic product per capita that these&#13;
+            economies experienced during 1970&ndash;2010 significantly&#13;
+            contributed ...</a></span>
+</div>
+<div class="content date-info">
+<a href="/handle/10986/26760" class="no-decor">May, 2017</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<p id="aspect_discovery_SiteRecentSubmissions_p_recent-submission-view-more" class="ds-paragraph recentSubmissionViewMore">
+<a href="/recent-submissions">View more</a>
+</p>
+</div>
+<div class="tab-pane" id="tab3">
+<ul class="ds-artifact-list list-unstyled">
+<!-- External Metadata URL: cocoon://metadata/handle/10986/25880/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL,ORIGINAL-->
+<li class="ds-artifact-item odd">
+<div class="item-wrapper clearfix" data-href="/handle/10986/25880">
+<div class="row ds-artifact-item ds-item-summary-row">
+<div class="col-sm-2 hidden-xs artifact-preview">
+<div class="thumbnail artifact-preview">
+<a href="/handle/10986/25880" class="image-link"><img class="img-responsive" alt="Thumbnail" src="/bitstream/handle/10986/25880/9781464809507.pdf.jpg?sequence=19&isAllowed=y"></a>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12 artifact-summary">
+<div class="item-metadata">
+<div class="content">
+<div class="content doctype-info">
+<span>Book</span>
+</div>
+<h4>
+<a href="/handle/10986/25880" class="no-decor">World Development Report 2017 : Governance and the Law</a>
+</h4>
+</div>
+<span class="Z3988 hidden-xs" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=978-1-4648-0950-7&amp;rft_id=http%3A%2F%2Fhdl.handle.net%2F10986%2F25880&amp;rft_id=210950&amp;rft_id=10.1596%2F978-1-4648-0950-7&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;rft.identifier=210950&amp;rft.date=2017-01-30&amp;rft.identifier=10.1596%2F978-1-4648-0950-7&amp;rft.name=Russian+PDFs+Available&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F6001&amp;rft.name=Spanish+PDFs+Available&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F6002&amp;rft.name=French+PDFs+Available&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F5995&amp;rft.name=Chinese+PDFs+Available&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F5998&amp;rft.name=Portuguese+PDFs+Available&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F6000&amp;rft.name=World+Development+Report&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F2124&amp;rft.googlescholar=yes">&nbsp;</span>
+<div class="content author-info">
+<span><a href="/handle/10986/25880" class="no-decor"><span>World Bank Group</span></a></span>
+</div>
+<div class="artifact-info hidden-xs hidden-sm hidden-md">
+<span class="short-description"><a href="/handle/10986/25880" class="no-decor">Why are carefully designed, sensible policies too often not adopted or implemented? When they are, why do they often fail to generate development outcomes such as security, growth, and equity? And why do some bad policies endure? This book addresses these fundamental questions, which are at the heart of development.&#13;
+&#13; ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-xs hidden-sm hidden-lg"><a href="/handle/10986/25880" class="no-decor">Why are carefully designed, sensible policies too often not adopted or implemented? When they are, why do they often fail to generate development outcomes such as security, growth, and equity? And why ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-md hidden-lg"><a href="/handle/10986/25880" class="no-decor">Why are carefully designed, sensible policies too often not adopted or implemented? When they are, why do they often fail to generate development outcomes such as security, growth, and equity? And why do some bad policies endure? This book addresses these fundamental questions, which are at the heart of development.&#13;
+&#13;
+Policy making and policy implementation do not occur in a vacuum. Rather, they take place ...</a></span>
+</div>
+<div class="content date-info">
+<a href="/handle/10986/25880" class="no-decor">Jan 30, 2017</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<!-- External Metadata URL: cocoon://metadata/handle/10986/24985/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL,ORIGINAL-->
+<li class="ds-artifact-item even">
+<div class="item-wrapper clearfix" data-href="/handle/10986/24985">
+<div class="row ds-artifact-item ds-item-summary-row">
+<div class="col-sm-2 hidden-xs artifact-preview">
+<div class="thumbnail artifact-preview">
+<a href="/handle/10986/24985" class="image-link"><img class="img-responsive" alt="Thumbnail" src="/bitstream/handle/10986/24985/9781464808524.pdf.jpg?sequence=12&isAllowed=y"></a>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12 artifact-summary">
+<div class="item-metadata">
+<div class="content">
+<div class="content doctype-info">
+<span>Annual Report</span>
+</div>
+<h4>
+<a href="/handle/10986/24985" class="no-decor">The World Bank Annual Report 2016</a>
+</h4>
+</div>
+<span class="Z3988 hidden-xs" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=978-1-4648-0852-4&amp;rft_id=http%3A%2F%2Fhdl.handle.net%2F10986%2F24985&amp;rft_id=210852&amp;rft_id=10.1596%2F978-1-4648-0852-4&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;rft.identifier=210852&amp;rft.date=2016-09-28&amp;rft.region=Africa&amp;rft.region=East+Asia+and+Pacific&amp;rft.region=Europe+and+Central+Asia&amp;rft.region=Latin+America+%26+Caribbean&amp;rft.region=Middle+East+and+North+Africa&amp;rft.region=South+Asia&amp;rft.identifier=10.1596%2F978-1-4648-0852-4&amp;rft.name=World+Bank+Annual+Reports+%26+Financial+Statements&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F2127&amp;rft.name=Russian+PDFs+Available&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F6001&amp;rft.name=Spanish+PDFs+Available&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F6002&amp;rft.name=French+PDFs+Available&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F5995&amp;rft.name=Arabic+PDFs+Available&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F5996&amp;rft.name=Chinese+PDFs+Available&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F5998&amp;rft.name=Japanese+PDFs+Available&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F5999&amp;rft.name=Portuguese+PDFs+Available&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F6000&amp;rft.googlescholar=yes">&nbsp;</span>
+<div class="content author-info">
+<span><a href="/handle/10986/24985" class="no-decor"><span>World Bank</span></a></span>
+</div>
+<div class="artifact-info hidden-xs hidden-sm hidden-md">
+<span class="short-description"><a href="/handle/10986/24985" class="no-decor">The Annual Report is prepared by the Executive Directors of the International Bank for Reconstruction and Development (IBRD) and the International Development Association (IDA)--collectively known as the World Bank--in accordance with the by-laws of the two institutions. The President of the IBRD and IDA and the Chairm ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-xs hidden-sm hidden-lg"><a href="/handle/10986/24985" class="no-decor">The Annual Report is prepared by the Executive Directors of the International Bank for Reconstruction and Development (IBRD) and the International Development Association (IDA)--collectively known as  ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-md hidden-lg"><a href="/handle/10986/24985" class="no-decor">The Annual Report is prepared by the Executive Directors of the International Bank for Reconstruction and Development (IBRD) and the International Development Association (IDA)--collectively known as the World Bank--in accordance with the by-laws of the two institutions. The President of the IBRD and IDA and the Chairman of the Board of Executive Directors submits the Report, together with the accompanying  ...</a></span>
+</div>
+<div class="content date-info">
+<a href="/handle/10986/24985" class="no-decor">Sep 28, 2016</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<!-- External Metadata URL: cocoon://metadata/handle/10986/25823/mets.xml?sections=dmdSec,fileSec&fileGrpTypes=THUMBNAIL,ORIGINAL-->
+<li class="ds-artifact-item odd">
+<div class="item-wrapper clearfix" data-href="/handle/10986/25823">
+<div class="row ds-artifact-item ds-item-summary-row">
+<div class="col-sm-2 hidden-xs artifact-preview">
+<div class="thumbnail artifact-preview">
+<a href="/handle/10986/25823" class="image-link"><img class="img-responsive" alt="Thumbnail" src="/bitstream/handle/10986/25823/9781464810169.pdf.jpg?sequence=4&isAllowed=y"></a>
+</div>
+</div>
+<div class="col-sm-10 col-xs-12 artifact-summary">
+<div class="item-metadata">
+<div class="content">
+<div class="content doctype-info">
+<span>Serial</span>
+</div>
+<h4>
+<a href="/handle/10986/25823" class="no-decor">Global Economic Prospects, January 2017 : Weak Investment in Uncertain Times</a>
+</h4>
+</div>
+<span class="Z3988 hidden-xs" title="ctx_ver=Z39.88-2004&amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc&amp;rft_id=978-1-4648-1016-9&amp;rft_id=http%3A%2F%2Fhdl.handle.net%2F10986%2F25823&amp;rft_id=211016&amp;rft_id=113224&amp;rft_id=10.1596%2F978-1-4648-1016-9&amp;rfr_id=info%3Asid%2Fdspace.org%3Arepository&amp;rft.identifier=211016&amp;rft.date=2017-01-10&amp;rft.identifier=113224&amp;rft.identifier=10.1596%2F978-1-4648-1016-9&amp;rft.relation=http%3A%2F%2Fwww.worldbank.org%2Fgep&amp;rft.relation=http%3A%2F%2Fwww.bancomundial.org%2Fes%2Fpublication%2Fglobal-economic-prospects&amp;rft.relation=http%3A%2F%2Fwww.shihang.org%2Fzh%2Fpublication%2Fglobal-economic-prospects&amp;rft.relation=http%3A%2F%2Fwww.worldbank.org%2Fpt%2Fpublication%2Fglobal-economic-prospects&amp;rft.relation=http%3A%2F%2Fwww.vsemirnyjbank.org%2Fru%2Fpublication%2Fglobal-economic-prospects&amp;rft.relation=http%3A%2F%2Fwww.banquemondiale.org%2Ffr%2Fpublication%2Fglobal-economic-prospects&amp;rft.name=Global+Economic+Prospects&amp;rft.link=https%3A%2F%2Fopenknowledge.worldbank.org%2Fhandle%2F10986%2F2140&amp;rft.googlescholar=yes">&nbsp;</span>
+<div class="content author-info">
+<span><a href="/handle/10986/25823" class="no-decor"><span>World Bank Group</span></a></span>
+</div>
+<div class="artifact-info hidden-xs hidden-sm hidden-md">
+<span class="short-description"><a href="/handle/10986/25823" class="no-decor">Stagnant global trade, subdued investment, and heightened policy uncertainty marked another difficult year for the world economy. A subdued recovery is expected for 2017, with receding obstacles to activity in commodity exporters and solid domestic demand in commodity importers. Weak investment is weighing on medium-te ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-xs hidden-sm hidden-lg"><a href="/handle/10986/25823" class="no-decor">Stagnant global trade, subdued investment, and heightened policy uncertainty marked another difficult year for the world economy. A subdued recovery is expected for 2017, with receding obstacles to ac ...</a></span>
+</div>
+<div class="artifact-info">
+<span class="short-description hidden-md hidden-lg"><a href="/handle/10986/25823" class="no-decor">Stagnant global trade, subdued investment, and heightened policy uncertainty marked another difficult year for the world economy. A subdued recovery is expected for 2017, with receding obstacles to activity in commodity exporters and solid domestic demand in commodity importers. Weak investment is weighing on medium-term prospects across many emerging markets and developing economies (EMDEs). Although fisca ...</a></span>
+</div>
+<div class="content date-info">
+<a href="/handle/10986/25823" class="no-decor">Jan 10, 2017</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<script>
+            if (!window.DSpace) {
+                window.DSpace = {};
+            }
+            if (!window.DSpace.i18n) {
+                window.DSpace.i18n = {};
+            }
+            if (!window.DSpace.i18n.query_suggestions) {
+                window.DSpace.i18n.query_suggestions = {};
+            }
+        window.DSpace.i18n.query_suggestions["head_recent_submissions"]="New Publications in collection";window.DSpace.i18n.query_suggestions["head_item_list"]="Top results for";window.DSpace.i18n.query_suggestions["item-author"]="Author(s)";window.DSpace.i18n.query_suggestions["item-date"]="Published";window.DSpace.i18n.query_suggestions["item-collections"]="Collection(s)";window.DSpace.i18n.query_suggestions["item-files-file"]="Files";window.DSpace.i18n.query_suggestions["item-files-single"]="File";window.DSpace.i18n.query_suggestions["item-type"]="Type";window.DSpace.i18n.query_suggestions["size-bytes"]="bytes";window.DSpace.i18n.query_suggestions["size-kilobytes"]="KB";window.DSpace.i18n.query_suggestions["size-megabytes"]="MB";window.DSpace.i18n.query_suggestions["size-gigabytes"]="GB";window.DSpace.i18n.query_suggestions["mimetype.english-pdf"]="English PDF";window.DSpace.i18n.query_suggestions["mimetype.application/marc"]="MARC record";window.DSpace.i18n.query_suggestions["mimetype.application/mathematica"]="Mathematica";window.DSpace.i18n.query_suggestions["mimetype.application/msword"]="Microsoft Word";window.DSpace.i18n.query_suggestions["mimetype.application/octet-stream"]="Unknown";window.DSpace.i18n.query_suggestions["mimetype.application/pdf"]="PDF";window.DSpace.i18n.query_suggestions["mimetype.application/postscript"]="Postscript";window.DSpace.i18n.query_suggestions["mimetype.application/sgml"]="SGML";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.ms-excel"]="Microsoft Excel";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.ms-powerpoint"]="Microsoft PowerPoint";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.ms-project"]="Microsoft Project";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.oasis.opendocument.database"]="OpenOffice Base";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.oasis.opendocument.formula"]="OpenOffice Math";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.oasis.opendocument.graphics"]="OpenOffice Draw";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.oasis.opendocument.presentation"]="OpenOffice Impress";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.oasis.opendocument.spreadsheet"]="OpenOffice Calc";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.oasis.opendocument.text"]="OpenOffice Writer";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.openxmlformats-officedocument.presentationml.presentation"]="Microsoft PowerPoint 2007";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]="Microsoft Excel 2007";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.openxmlformats-officedocument.wordprocessingml.document"]="Microsoft Word 2007";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.sun.xml.calc"]="OpenOffice Calc (1.x)";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.sun.xml.draw"]="OpenOffice Draw (1.x)";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.sun.xml.impress"]="OpenOffice Impress (1.x)";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.sun.xml.writer.global"]="OpenOffice Writer (1.x)";window.DSpace.i18n.query_suggestions["mimetype.application/vnd.visio"]="Microsoft Visio";window.DSpace.i18n.query_suggestions["mimetype.application/wordperfect5.1"]="WordPerfect";window.DSpace.i18n.query_suggestions["mimetype.application/x-dvi"]="TeX DVI";window.DSpace.i18n.query_suggestions["mimetype.application/x-filemaker"]="FileMaker Pro";window.DSpace.i18n.query_suggestions["mimetype.application/x-java-applet"]="Java applet";window.DSpace.i18n.query_suggestions["mimetype.application/x-latex"]="LaTeX";window.DSpace.i18n.query_suggestions["mimetype.application/x-photoshop"]="Photoshop";window.DSpace.i18n.query_suggestions["mimetype.application/x-tex"]="TeX";window.DSpace.i18n.query_suggestions["mimetype.english-pdf"]="English PDF";window.DSpace.i18n.query_suggestions["mimetype.audio/basic"]="Basic Audio";window.DSpace.i18n.query_suggestions["mimetype.audio/flac"]="FLAC Audio";window.DSpace.i18n.query_suggestions["mimetype.audio/m4a"]="AAC audio";window.DSpace.i18n.query_suggestions["mimetype.audio/m4a-latm"]="AAC audio";window.DSpace.i18n.query_suggestions["mimetype.audio/mpeg"]="mp3 audio";window.DSpace.i18n.query_suggestions["mimetype.audio/x-aiff"]="AIFF audio";window.DSpace.i18n.query_suggestions["mimetype.audio/x-mpeg"]="MPEG Audio";window.DSpace.i18n.query_suggestions["mimetype.audio/x-ms-wma"]="WMA Audio";window.DSpace.i18n.query_suggestions["mimetype.audio/x-ms-wmv"]="WMV Audio";window.DSpace.i18n.query_suggestions["mimetype.audio/x-ogg"]="Ogg Vorbis";window.DSpace.i18n.query_suggestions["mimetype.audio/x-pn-realaudio"]="RealAudio";window.DSpace.i18n.query_suggestions["mimetype.audio/x-wav"]="WAV audio";window.DSpace.i18n.query_suggestions["mimetype.image/gif"]="GIF image";window.DSpace.i18n.query_suggestions["mimetype.image/jp2"]="JPEG 2000 image";window.DSpace.i18n.query_suggestions["mimetype.image/jpeg"]="JPEG image";window.DSpace.i18n.query_suggestions["mimetype.image/png"]="PNG image";window.DSpace.i18n.query_suggestions["mimetype.image/tiff"]="TIFF image";window.DSpace.i18n.query_suggestions["mimetype.image/x-ms-bmp"]="BMP image";window.DSpace.i18n.query_suggestions["mimetype.image/x-photo-cd"]="Photo CD";window.DSpace.i18n.query_suggestions["mimetype.text/css"]="CSS file";window.DSpace.i18n.query_suggestions["mimetype.text/csv"]="CSV file";window.DSpace.i18n.query_suggestions["mimetype.text/html"]="HTML";window.DSpace.i18n.query_suggestions["mimetype.text/javascript"]="Javascript";window.DSpace.i18n.query_suggestions["mimetype.text/plain"]="Text file";window.DSpace.i18n.query_suggestions["mimetype.text/richtext"]="RTF file";window.DSpace.i18n.query_suggestions["mimetype.text/xml"]="XML";window.DSpace.i18n.query_suggestions["mimetype.video/avi"]="AVI video";window.DSpace.i18n.query_suggestions["mimetype.video/mjp2"]="Motion JPEG 2000";window.DSpace.i18n.query_suggestions["mimetype.video/mpeg"]="MPEG video";window.DSpace.i18n.query_suggestions["mimetype.video/mpeg2"]="MPEG-2 video";window.DSpace.i18n.query_suggestions["mimetype.video/mp4"]="MPEG-4 video";window.DSpace.i18n.query_suggestions["mimetype.video/quicktime"]="QuickTime video";</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="container">
+<div class="row">
+<div class="footer col-lg-12 col-xs-12 pull-left">
+<div class="footertop">
+<div class="row">
+<div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+<div class="footertopcol footersocial">
+<h2>Stay Connected</h2>
+<ul class="socials">
+<li>
+<a target="_blank" href="http://www.facebook.com/worldbankpublications"><img title="Facebook" src="/themes/OKR2/images/sm-icons-fb.svg" alt="Facebook"></a>
+</li>
+<li>
+<a target="_blank" href="http://twitter.com/WBPubs"><img title="Twitter" src="/themes/OKR2/images/sm-icons-twitter.svg" alt="Twitter"></a>
+</li>
+<li>
+<a target="_blank" href="https://www.linkedin.com/company/world-bank-publications"><img title="LinkedIn" src="/themes/OKR2/images/linkedin-icon.svg" alt="LinkedIn" class="linkedin-icon"></a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-xs-12 col-sm-3">
+<div class="footertopcol footerresources">
+<h2>Resources</h2>
+<ul>
+<li>
+<a href="http://documents.worldbank.org/curated/en/000406484_20120403130112" target="_blank">Open Access Policy</a>
+</li>
+<li>
+<a href="http://www.worldbank.org/wbaccess" target="_blank">Access to Information Policy</a>
+</li>
+<li>
+<a href="http://data.worldbank.org/" target="_blank">Open Data</a>
+</li>
+<li>
+<a href="http://www.worldbank.org/open" target="_blank">Open Development</a>
+</li>
+<li>
+<a href="http://documents.worldbank.org" target="_blank">Documents &amp; Reports</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-xs-12 col-sm-3">
+<div class="footertopcol footerabout">
+<h2>About</h2>
+<ul>
+<li>
+<a href="https://openknowledge.worldbank.org/about">Information</a>
+</li>
+<li>
+<a href="https://openknowledge.worldbank.org/terms-of-use">Terms of Use</a>
+</li>
+<li>
+<a href="https://openknowledge.worldbank.org/faq">Frequently Asked Questions</a>
+</li>
+<li>
+<a href="https://openknowledge.worldbank.org/harvesting-the-okr">Harvesting the OKR</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-xs-12 col-sm-3">
+<div class="footertopcol footernews">
+<h2>News</h2>
+<ul>
+<li>
+<a href="https://openknowledge.worldbank.org/news">Updates and events</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-sm-3 col-md-offset-1 col-md-2 hidden-xs">
+<div class="footertopcol">
+<h2>Stay Connected</h2>
+<ul class="socials">
+<li>
+<a target="_blank" href="http://www.facebook.com/worldbankpublications"><img title="Facebook" src="/themes/OKR2/images/sm-icons-fb.svg" alt="Facebook"></a>
+</li>
+<li>
+<a target="_blank" href="http://twitter.com/WBPubs"><img title="Twitter" src="/themes/OKR2/images/sm-icons-twitter.svg" alt="Twitter"></a>
+</li>
+<li>
+<a target="_blank" href="https://www.linkedin.com/company/world-bank-publications"><img title="LinkedIn" src="/themes/OKR2/images/linkedin-icon.svg" alt="LinkedIn" class="linkedin-icon"></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="footerwbg">
+<div class="theworldbankgroup">
+<a href="http://www.worldbank.org"><img src="/themes/OKR2/images/logo-wbg-footer-en.svg"></a>
+</div>
+<div class="partner">
+<a href="http://www.worldbank.org/ibrd" target="_blank">IBRD</a><a href="http://www.worldbank.org/ida" target="_blank">IDA</a><a href="http://www.ifc.org/" target="_blank">IFC</a><a href="http://www.miga.org/" target="_blank">MIGA</a><a href="http://icsid.worldbank.org/" target="_blank">ICSID</a>
+</div>
+</div>
+<div class="footerwhite clearfix">
+<div class="footerwhite-left">
+<p>
+<a href="http://www.worldbank.org/legalinfo" target="_blank">Legal</a><a href="http://go.worldbank.org/TRCDVYJ440" target="_blank">Access to Information</a><a href="http://go.worldbank.org/NLCQMY3UZ0" target="_blank">Jobs</a><a href="http://www.worldbank.org/sitemap" target="_blank">Site Map</a><a href="http://www.worldbank.org/contacts" target="_blank">Contact</a>
+<br>
+<p id="rightsreserved">&copy; <script type="text/javascript">document.write(currentYear);</script> The World Bank Group, All Rights Reserved.
+                                </p>
+</p>
+</div>
+<div class="footerwhite-right">
+<p>
+<a href="http://web.worldbank.org/WBSITE/EXTERNAL/EXTABOUTUS/ORGANIZATION/ORGUNITS/EXTDOII/0,,contentMDK:20659616~menuPK:1702202~pagePK:64168445~piPK:64168309~theSitePK:588921,00.html" target="_blank">
+                                    Fraud &amp; Corruption Hotline<br>1-800-831-0463
+                                </a>
+</p>
+</div>
+<a class="hidden" href="/htmlmap">&nbsp;</a>
+</div>
+</div>
+</div>
+<span id="tweet-icon" class="fa-stack fa-lg hidden"><i class="fa fa-square fa-stack-background"></i><i id="tweet-icon-bird" title="Tweet the selected text" rel="tooltip" class="fa fa-twitter-square fa-stack-2x"></i></span>
+</footer>
+<script>if(!window.DSpace){window.DSpace={};}window.DSpace.context_path='';window.DSpace.theme_path='/themes/OKR2/';</script><script src="/themes/OKR2/scripts/theme.js"> </script><script src="/static/js/jquery.visible.min.js" type="text/javascript"> </script><script src="/aspects/ReportingSuite/scripts/statlet_main.js">
+                         
+                    </script><script src="/loadJQuery.js">
+                         
+                    </script><script src="/aspects/ReportingSuite/scripts/statlet_main.js">
+                         
+                    </script><script type="text/javascript" src="//siteresources.worldbank.org/SITEMGR/Resources/WebStatsUtil.js"> </script><script type="text/javascript">
+            var s_pageName="";
+            var s_channel="EXT Open Knowledge Repository EXT";
+            var s_hier1 = "EXT, EXT Open Knowledge Repository EXT";
+            var s_prop1 = "";
+            var s_prop2 = "Not Available";  /* Author */
+                          var s_prop3 = "Not Available";  /* Date */
+                          var s_prop4 = "Not Available";  /* Topic */
+                          var s_prop5 = "Not Available";  /* Sub Topic */
+                          var s_prop6 = "Not Available";  /* Region */
+                          var s_prop7 = "Not Available";  /* Country */
+                          var s_prop8 = "Not Available";  /* DocType */
+                          var s_prop9 = "Not Available";  /* MDK or unique identifier */
+                
+            var s_prop10 = "Live";          /* Site Status */
+            var s_prop11 = "Not Available"; /* Data Source */
+            var s_prop13 = "EXT";           /* VPU */
+            var s_prop16="English";         /* doc language */
+            var s_prop17="English";         /* site language */
+
+            var omnitureCookieContent= getCookieValueByName('omniture');
+            var s_prop18 =getVPU(omnitureCookieContent);
+            var s_prop19 =getDutyStation(omnitureCookieContent);
+            var s_prop20 =getUserType(omnitureCookieContent);
+
+            var sTitle = document.title;
+
+            s_pageName = "OKR - " + sTitle;
+            s_prop1 = sTitle;
+            s_hier1 += ", " + sTitle;
+
+            var s_account="wbnispextokr,wbglobalext";</script><script type="text/javascript" src="//siteresources.worldbank.org/scripts/s_code_remote.js"> </script><script>
+                   var _gaq = _gaq || [];
+                   _gaq.push(['_setAccount', 'UA-31253210-1']);
+                   _gaq.push(['_trackPageview']);
+
+                   (function() {
+                       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                   })();
+           </script><script type="text/javascript">
+                 if(typeof window.atmire === 'undefined'){
+                    window.atmire={};
+                  };
+                window.atmire.contextPath= '';window.atmire.themePath= '/themes/OKR2/';
+                window.atmire.page_type= '';window.atmire.querysuggestion = {};window.atmire.querysuggestion.delay=250;</script><script type="text/javascript">
+                setTimeout(function(){var a=document.createElement("script");
+                var b=document.getElementsByTagName("script")[0];
+                a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0028/9164.js?"+Math.floor(new Date().getTime()/3600000);
+                a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+            </script>
+</body></html>

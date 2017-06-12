@@ -8,6 +8,7 @@ import {
     getFiscalMonitor,
     getRegionalEconomicReports
 } from '../actions/imf'
+import IMFPublication from './IMFPublication'
 
 class MainComponent extends React.Component {
 
@@ -17,7 +18,21 @@ class MainComponent extends React.Component {
     }
 
     render() {
-        return (<div className="card card-block bg-faded">{this.props.articles.title}</div>)
+        let rows = []
+        for (var i = 0; i < this.props.articles.articles.length; i ++) {
+            rows.push(
+            <IMFPublication 
+                item={this.props.articles.articles[i]} 
+                key={i} />)
+        }
+        console.log(rows)
+
+        return (
+            <div>
+                <div className="card card-block bg-faded">{this.props.articles.title}</div>
+                {rows}      
+            </div>
+        )
     }
 
 }
