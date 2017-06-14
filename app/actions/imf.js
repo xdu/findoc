@@ -64,7 +64,7 @@ function parse(text) {
             let desc  = $(elem).find("p")
                 .map((idx, el) => $(el).text().trim().replace(/\s+/g,' '))
                 .get()
-                .join(" \n")
+                .join("\n")
             articles.push({link, title, desc});
         }) 
 

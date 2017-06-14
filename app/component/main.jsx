@@ -9,6 +9,7 @@ import {
     getRegionalEconomicReports
 } from '../actions/imf'
 import IMFPublication from './IMFPublication'
+import Menu from './Menu'
 
 class MainComponent extends React.Component {
 
@@ -28,9 +29,13 @@ class MainComponent extends React.Component {
         console.log(rows)
 
         return (
-            <div>
-                <div className="card card-block bg-faded">{this.props.articles.title}</div>
-                {rows}      
+            <div className="row">
+                <div className="col-sm-4">
+                    <Menu></Menu>
+                </div>
+                <div className="col-sm-8">
+                    {rows}      
+                </div>
             </div>
         )
     }

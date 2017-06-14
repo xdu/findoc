@@ -22,10 +22,16 @@ class IMFPublication extends React.Component {
     render() {
         const item = this.props.item
         return (
-            <div>
-                <p><button onClick={this.open}>link</button></p>
-                <Title>{item.title}</Title>
-                <p>{item.desc}</p>
+            <div className="card card-block bg-faded">
+                <div>
+                    <Title onClick={this.open}>{item.title}</Title>
+                    <button className="btn btn-sm btn-default" onClick={this.open}>open</button>
+                </div>
+                <p>
+                    {item.desc.split("\n").map(i => {
+                        return <div>{i}</div>;
+                    })}
+                </p>
             </div>
         )
     }
