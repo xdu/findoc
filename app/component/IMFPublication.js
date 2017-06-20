@@ -27,11 +27,11 @@ class IMFPublication extends React.Component {
                     <Title onClick={this.open}>{item.title}</Title>
                     <button className="btn btn-sm btn-default" onClick={this.open}>open</button>
                 </div>
-                <p>
-                    {item.desc.split("\n").map(i => {
-                        return <div>{i}</div>;
+                <div>
+                    {item.desc.split("\n").map((v, i) => {
+                        return <p key={i}>{v}</p>;
                     })}
-                </p>
+                </div>
             </div>
         )
     }
